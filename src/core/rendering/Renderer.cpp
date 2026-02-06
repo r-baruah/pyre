@@ -718,8 +718,8 @@ void Renderer::SubmitMesh(const glm::mat4& model,
     }
 
     // we merge the global overrides with the material's specific settings
-    bool doShowNormals = mat->GetBool("showNormals");
-    bool doOutline = mat->GetBool("outlineEnabled");
+    bool doShowNormals = mat->GetBool("showNormals") || showNormals;
+    bool doOutline = mat->GetBool("outlineEnabled") || forceOutlines;
     float bloomFactor = mat->GetFloat("bloomFactor");
     glm::vec3 outlineCol = mat->GetVec3("outlineColor");
     bool wireframe = mat->GetBool("wireframe");

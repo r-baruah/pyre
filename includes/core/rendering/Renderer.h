@@ -45,6 +45,10 @@ public:
     std::shared_ptr<Shader> outlineShader;
     std::shared_ptr<Shader> normalShader;
 
+    // Global Debug Toggles
+    bool showNormals = false;
+    bool forceOutlines = false;
+
 private:
     // internal initialization helpers
     
